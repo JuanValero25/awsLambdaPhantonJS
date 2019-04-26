@@ -2,7 +2,7 @@
   "name": "pod-html-to-pdf",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "lambda.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,15 +10,8 @@
     "html-pdf": "^2.2.0",
     "table-builder": "^2.1.1",
     "unzip": "^0.1.10",
-    "aws-sdk": "^2.442.0"
-  },
-   "scripts": {
-    "deploy-pipeline": "aws cloudformation deploy --template-file pipeline.yaml --stack-name \"phantom-pipeline\" --capabilities CAPABILITY_IAM",
-    "package": "aws cloudformation package --template-file serverless.yaml --s3-bucket phaton --s3-prefix \"phantom\" --output-template-file serverless-output.yaml",
-    "publish": "aws cloudformation deploy --template-file serverless-output.yaml --stack-name \"phantom\" --capabilities CAPABILITY_IAM",
-    "deploy": "npm run package && npm run publish",
-    "test": "mocha test/*",
-    "integration-test": "mocha test/*"
+    "aws-sdk": "^2.442.0",
+    "phantomjs-prebuilt": "^2.1.4"
   },
   "keywords": [],
   "author": "",
