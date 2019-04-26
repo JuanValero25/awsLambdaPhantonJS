@@ -11,4 +11,4 @@ phases:
       
   type: zip
   files:
-    - *
+    - *.*
