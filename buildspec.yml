@@ -1,0 +1,21 @@
+version: 0.1
+
+phases:
+
+  install: 
+    commands:
+- npm install
+
+  pre_build: 
+    commands:
+     
+
+  build:
+    commands:
+      # Build our application
+      - go build -o main
+
+artifacts:
+  files:
+    - main
+    - lambdaProperties.yaml
