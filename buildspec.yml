@@ -3,13 +3,13 @@ phases:
   install:
     commands:
       - npm install
- artifacts:
+artifacts:
   type: zip
   files:
-   - lambda.js
-   - lambda.properties
-   - monsanto-table-builder.js
-   - package.json
-   - node_modules/*
+    - lambda.js
+    - lambda.properties
+    - monsanto-table-builder.js
+    - package.json
+    - node_modules/*
 
-   
+
