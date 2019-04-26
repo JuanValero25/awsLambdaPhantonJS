@@ -10,6 +10,6 @@ artifacts:
     - lambda.properties
     - monsanto-table-builder.js
     - package.json
-    - node_modules
+    - '/node_modules/*/**'
 
 
