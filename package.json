@@ -12,6 +12,14 @@
     "unzip": "^0.1.10",
     "aws-sdk": "^2.442.0"
   },
+   "scripts": {
+    "deploy-pipeline": "aws cloudformation deploy --template-file pipeline.yaml --stack-name \"phantom-pipeline\" --capabilities CAPABILITY_IAM",
+    "package": "aws cloudformation package --template-file serverless.yaml --s3-bucket phaton --s3-prefix \"phantom\" --output-template-file serverless-output.yaml",
+    "publish": "aws cloudformation deploy --template-file serverless-output.yaml --stack-name \"phantom\" --capabilities CAPABILITY_IAM",
+    "deploy": "npm run package && npm run publish",
+    "test": "mocha test/*",
+    "integration-test": "mocha test/*"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
