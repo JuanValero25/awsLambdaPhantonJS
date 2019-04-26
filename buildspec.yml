@@ -11,4 +11,8 @@ phases:
       
   type: zip
   files:
-    - *.*
+   - lambda.js
+   - lambda.properties
+   - monsanto-table-builder.js
+   - package.json
+   - node_modules/*
